@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+<head>
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0,minimal-ui">
+<title>测试页面</title>
+<link href="statics/style/reset.css" rel="stylesheet">
+<link href="statics/style/X.css" rel="stylesheet">
+<link href="statics/style/page.css" rel="stylesheet">
+<script>
++function(b){var h=document.documentElement,w=h.clientWidth;w=w/b*100;w-=(w-50)/2;h.style.fontSize=Math.round(w)+"px";}(750);
+</script>
+<!--页面相关css引用-->
+<style>
+[v-cloak] {
+  display: none !important;
+}
+</style>
+<!--页面相关css引用结束-->
+</head>
+<body ontouchstart v-cloak id="J_AppMain">
+
+<div class="x-app">
+<div class="x-app-body">
+<div class="x-app-inbody">
+
+	<h1>UI框架</h1>
+	<div class="x-cells">
+		<a class="x-cell" v-for="cell in cells" href="{{cell.href}}">
+			<div class="x-cell-bd"><p>{{cell.p}}<span>{{cell.en}}</span></p></div>
+		</a>
+	</div>
+
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="statics/js/X.js"></script>
+<script type="text/javascript" src="statics/js/vue.min.js"></script>
+<script type="text/javascript" src="statics/js/vue.tap.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+    el: "#J_AppMain",
+    data: {
+        cells: [
+            { href: "wrapper.html", p: "外层", en: "Wrapper"},
+            { href: "tab.html", p: "标签", en: "Tab"},
+            { href: "alert.html", p: "对话框", en: "Alert"},
+            { href: "toast.html", p: "提示框", en: "Toast"},
+            { href: "loading.html", p: "加载", en: "Loading"},
+            { href: "button.html", p: "按钮", en: "Button"},
+            { href: "cell.html", p: "列表", en: "Cell"},
+            { href: "panel.html", p: "模块", en: "Panel"},
+            { href: "goods.html", p: "商品", en: "Goods"},
+            { href: "icon.html", p: "图标", en: "Icon"},
+        ]
+    },
+    methods: {
+        
+    }
+});
+</script>
+</body>
+</html>

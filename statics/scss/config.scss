@@ -1,0 +1,26 @@
+// 颜色类
+@function cr($type){
+	@if $type == em {
+		@return #76bdff; // 主色调，这里是用的蓝色
+	} @else if $type == strong {
+		@return #ff5e3a; // 重要文字颜色，红的
+	} @else if $type == p {
+		@return #535353; // 默认文字颜色，中度的黑
+	} @else if $type == span {
+		@return #999; // 比较不重要的文字，浅灰
+	} @else if $type == body {
+		@return #f2f4f6; // 背景，很浅的灰
+	} @else if $type == border {
+		@return #dcdfe3; // 边框颜色
+	}
+}
+
+// 计算颜色器，增加颜色变亮，减少颜色变暗
+@function crcalc($color, $val){
+	@return $color + $val;
+}
+
+//px转rem，用于宽高尺寸
+@function pr($px){
+	@return $px/100 + rem;
+}
